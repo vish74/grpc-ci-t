@@ -8,7 +8,6 @@ services:
 
 before_install:
 - docker pull grpc/cxx
-- docker run -i -t grpc/cxx bin/bash
 
 script:
-- make all
+- docker build -t grpcci
