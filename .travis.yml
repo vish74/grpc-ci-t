@@ -1,0 +1,15 @@
+sudo: required
+
+compiler:
+  - clang
+  - gcc
+
+services:
+  - docker
+
+before_install:
+- docker pull grpc/cxx
+- docker run grpc/cxx bin/bash
+
+script:
+- make all
